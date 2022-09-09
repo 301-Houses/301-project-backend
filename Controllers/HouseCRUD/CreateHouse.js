@@ -12,7 +12,7 @@ let handelCreate= async(req,res)=>{
         email:email,
         phoneNumber:phoneNumber
     })
-    houseModel.find({},(err,result)=>{
+    houseModel.find({email:email},(err,result)=>{
       if(err)
       {
           console.log(err);
