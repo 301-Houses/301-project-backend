@@ -22,10 +22,19 @@ function ServerInit() {
   });
 }
 
+
 /********************* Require Handlers From Controllers Folder ********************** */
+// const seedData = require("./Controllers/HouseCRUD/seedData");
+   const handelFetch=require('./Controllers/HouseCRUD/Fetch')
+const handelCreate = require("./Controllers/HouseCRUD/CreateHouse");
+const handelDelet = require("./Controllers/HouseCRUD/DeletHouse");
+const handelUpdate = require("./Controllers/HouseCRUD/UpdateHouse");
 
-/************************************************************************************* */
-
+// /************************************************************************************* */
+app.get("/house/:email", handelFetch);
+app.post("/house", handelCreate);
+app.delete("/house/:id/:email", handelDelet);
+app.put("/house/:id", handelUpdate);
 /********************* Setup Routes Here ******************************/
 
 //app.get ....
