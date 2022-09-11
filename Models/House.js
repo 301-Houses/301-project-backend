@@ -1,6 +1,6 @@
 const mongoose=require('mongoose')
 mongoose.connect('mongodb://teamproject301:0000@ac-p33uldq-shard-00-00.liz90b2.mongodb.net:27017,ac-p33uldq-shard-00-01.liz90b2.mongodb.net:27017,ac-p33uldq-shard-00-02.liz90b2.mongodb.net:27017/?ssl=true&replicaSet=atlas-7lh4q2-shard-0&authSource=admin&retryWrites=true&w=majority',{useNewUrlParser: true, useUnifiedTopology: true}) ;  
-
+// ispremeum,lon,lat,
 const houseSchema = new mongoose.Schema({
     imgURL: {
         type: String,
@@ -36,7 +36,7 @@ const houseSchema = new mongoose.Schema({
         required: true,
       },
       phoneNumber: {
-        type: Number,
+        type: String,
         required: true,
       },
     poster_date: {

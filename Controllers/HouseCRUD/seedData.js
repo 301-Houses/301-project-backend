@@ -10,7 +10,7 @@ let seedData=async()=>{
         numOfRoomse:6 ,
         isSold:false,
         price:1000,
-       phoneNumber:0781327360
+       phoneNumber:"0781327360"
     
     })
     let secondHouse= new houseModel({
@@ -22,7 +22,7 @@ let seedData=async()=>{
         numOfRoomse:6 ,
         isSold:false,
         price:1000,
-        phoneNumber:0781327360
+        phoneNumber:"0781327360"
         
     })
     let thirdHouse= new houseModel({
@@ -34,7 +34,7 @@ let seedData=async()=>{
         numOfRoomse:6 ,
         isSold:false,
         price:1000,
-        phoneNumber:0781327360
+        phoneNumber:"0781327360"
         
     })
     
