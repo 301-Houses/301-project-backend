@@ -24,7 +24,8 @@ function ServerInit() {
 
 
 /********************* Require Handlers From Controllers Folder ********************** */
-// const seedData = require("./Controllers/HouseCRUD/seedData");
+const seedData = require("./Controllers/HouseCRUD/seedData");
+// seedData()
 const handelFetch=require('./Controllers/HouseCRUD/Fetch')
 const handelCreate = require("./Controllers/HouseCRUD/CreateHouse");
 const handelDelet = require("./Controllers/HouseCRUD/DeletHouse");

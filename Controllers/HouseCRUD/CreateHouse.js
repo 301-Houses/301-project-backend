@@ -2,7 +2,7 @@ const houseModel = require("../../Models/House");
 let handelCreate= async(req,res)=>{
     let{imgURL,ownerName,houseAddress,email,houseSize,numOfRoomse,isSold,price,phoneNumber}=req.body;
     await houseModel.create({
-        imgURL: imgURL,     
+        imgURL: imgURL,         
         ownerName:ownerName,
         houseAddress :houseAddress,
         houseSize :houseSize,
