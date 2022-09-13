@@ -57,6 +57,15 @@ required:true
             day: "numeric",
           }),
       }, 
+      lat:{
+        type:Number,
+        required :true
+      },
+      long:{
+        type:Number,
+        required :true
+      }
+      
       
   });
   let house=mongoose.model('house',houseSchema)

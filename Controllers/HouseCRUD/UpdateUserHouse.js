@@ -1,7 +1,8 @@
 const houseModel = require("../../Models/House");
 let handelUserUpdate=(req,res)=>{
     let id=req.params.id
-    let{imgURL,ownerName,houseAddress,email,houseSize,numOfRoomse,isSold,price,phoneNumber,status}=req.body;
+    let email=req.params.email
+    let{imgURL,ownerName,houseAddress,houseSize,numOfRoomse,isSold,price,phoneNumber,status}=req.body;
     console.log(req.body);
     houseModel.findByIdAndUpdate(id,{imgURL,ownerName,houseAddress,email,houseSize,numOfRoomse,isSold,price,phoneNumber,status},(err,result)=>{
   

@@ -25,7 +25,7 @@ function ServerInit() {
 
 /********************* Require Handlers From Controllers Folder ********************** */
 const seedData = require("./Controllers/HouseCRUD/seedData");
-// seedData()
+// seedData();
 const handelFetch=require('./Controllers/HouseCRUD/Fetch')
 const handelCreate = require("./Controllers/HouseCRUD/CreateHouse");
 const handelDelet = require("./Controllers/HouseCRUD/DeletHouse");
@@ -39,7 +39,7 @@ app.put('house/:id',handelUpdateHouse)
 app.get("/house", handelFetch);
 app.post("/house", handelCreate);
 app.delete("/house/:id/:email", handelDelet);
-app.put("/house/:id", handelUserUpdate);
+app.put("/house/:id/:email", handelUserUpdate);
 app.get('/house/:email',handelFetchUser)
 /********************************************************************/
 
