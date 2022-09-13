@@ -29,16 +29,17 @@ const seedData = require("./Controllers/HouseCRUD/seedData");
 const handelFetch=require('./Controllers/HouseCRUD/Fetch')
 const handelCreate = require("./Controllers/HouseCRUD/CreateHouse");
 const handelDelet = require("./Controllers/HouseCRUD/DeletHouse");
-const handelUpdate = require("./Controllers/HouseCRUD/UpdateHouse");
+const handelUserUpdate = require("./Controllers/HouseCRUD/UpdateUserHouse");
 const handelFetchUser=require('./Controllers/HouseCRUD/FetchUserData')
+const handelUpdateHouse=require('./Controllers/HouseCRUD/UpdateHouse')
 // /************************************************************************************* */
 
 /********************* Setup Routes Here ******************************/
-
+app.put('house/:id',handelUpdateHouse)
 app.get("/house", handelFetch);
 app.post("/house", handelCreate);
 app.delete("/house/:id/:email", handelDelet);
-app.put("/house/:id", handelUpdate);
+app.put("/house/:id", handelUserUpdate);
 app.get('/house/:email',handelFetchUser)
 /********************************************************************/
 

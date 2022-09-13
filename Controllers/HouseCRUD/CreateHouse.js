@@ -1,6 +1,6 @@
 const houseModel = require("../../Models/House");
 let handelCreate= async(req,res)=>{
-    let{imgURL,ownerName,houseAddress,email,houseSize,numOfRoomse,isSold,price,phoneNumber}=req.body;
+    let{imgURL,ownerName,houseAddress,email,houseSize,numOfRoomse,isSold,price,phoneNumber,ispremium,status}=req.body;
     await houseModel.create({
         imgURL: imgURL,         
         ownerName:ownerName,
@@ -10,7 +10,9 @@ let handelCreate= async(req,res)=>{
         isSold:isSold,
         price:price,
         email:email,
-        phoneNumber:phoneNumber
+        phoneNumber:phoneNumber,
+        ispremium:ispremium,
+        status:status
     })
     houseModel.find({email:email},(err,result)=>{
       if(err)

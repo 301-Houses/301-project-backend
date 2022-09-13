@@ -1,5 +1,5 @@
 const houseModel = require("../../Models/House");
-let handelUpdate=(req,res)=>{
+let handelUserUpdate=(req,res)=>{
     let id=req.params.id
     let{imgURL,ownerName,houseAddress,email,houseSize,numOfRoomse,isSold,price,phoneNumber,status}=req.body;
     console.log(req.body);
@@ -9,7 +9,7 @@ let handelUpdate=(req,res)=>{
             console.log(err);
         }
         else {
-            houseModel.find({id:id},(err,result)=>{
+            houseModel.find({email:email},(err,result)=>{
                 if(err)
                 {
                     console.log(err);
@@ -25,4 +25,4 @@ let handelUpdate=(req,res)=>{
     })
   
   }
-  module.exports= handelUpdate
+  module.exports= handelUserUpdate
